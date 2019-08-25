@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在线生成背景笔画图</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="Keywords" content="在线生成背景笔画图,在线生成,背景笔画图,笔画图,背景图">
+    <meta name="description" content="在线免费将任意两字转化为背景笔画图，即背景为部分字符的部首，主体为两字，可免费生成并下载">
+    <link rel=stylesheet href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="header">
+        <!--导航放些外链-->
+        <p><a  href="https://sixming.com">极简影院</a></p>
+        <p><a href="https://bug.muwall.cn/">小明影院</a></p>
+        <p><a href="http://music.muwall.cn/">音乐站</a></p>
+    </div>
+
+    <div class="contain">
+        <!--主要的东西-->
+        <h1>笔画图在线生成</h1>
+        <div class="input">
+            <input id="text" name="text" type="text" maxlength="2" required="required" onkeyup="key()"/>
+            <label>请输入文本</label>
+            <img onclick="draw()" src="enter.png">
+        </div>
+    </div>
+
+    <div class="canvas">
+        <p>预览</p>
+        <canvas id="Canvas" height="256" width="256"  style="width:128px;height:128px;"></canvas>
+
+        <a href="" download="image.png" class="download">点我下载</a>
+    </div>
+
+    <div class="side">
+        <p>示例</p>
+        <img id="demo" src="demo.jpg">
+        <p>输入<span style="color: red">两字</span>的汉字即可生成相应的笔画背景图!　</p>
+    </div>
+
+    <div class="question">
+        <img id="img" src="question.png" onclick="help()">
+    </div>
+
+    <div class="footer">
+        <p>Copyright © <a style="text-decoration:none;" href="http://blog.sixming.com">Littleor</a> and <a style="text-decoration:none;" href='#' onclick="alert('一位PPT萌新-提供本站图标和创意想法')">如鲸向海</a> ALL right reserverd</p>
+        <!--底部放版权信息-->
+    </div>
+</body>
+</html>

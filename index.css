@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'LittleSong';
+    font-weight:normal;
+    src:url("LittleSong.woff");
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(to bottom right, rgba(217, 241, 255, 0.71), white) no-repeat;
+    font-family: "Kaiti TC","monospace",sans-serif,"LittleSong";
+}
+
+h1{
+    color: rgba(43, 61, 79, 0.21);
+    white-space:nowrap;
+    font-weight: 900;
+
+    -webkit-background-clip: text;
+
+    -webkit-animation: water 15s infinite;
+    animation: water 15s infinite;
+    -o-animation: water 15s infinite;
+    -moz-animation: water 15s infinite;
+}
+@-moz-keyframes water {
+    from{
+        background-position: left 0 top 0;
+    }
+    to{
+        background-position: left 1000px top 0;
+    }
+}
+@-ms-keyframes water {
+    from{
+        background-position: left 0 top 0;
+    }
+    to{
+        background-position: left 1000px top 0;
+    }
+}
+@-o-keyframes  water{
+    from{
+        background-position: left 0 top 0;
+    }
+    to{
+        background-position: left 1000px top 0;
+    }
+}
+
+@-webkit-keyframes  water{
+    from{
+        background-position: left 0 top 0;
+    }
+    to{
+        background-position: left 1000px top 0;
+    }
+}
+@keyframes water {
+    from{
+        background-position: left 0 top 0;
+    }
+    to{
+        background-position: left 1000px top 0;
+    }
+}
+
+.header{
+    width: 100%;
+    height: 30px;
+}
+.header p{
+    display: inline-block;
+    float: right;
+    margin-top: 2vh;
+    margin-right: 3vw;
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Heiti SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    color: #4c4c4c;
+    font-weight: 700;
+    font-size: 15px;
+}
+.header p a{
+    color:#4c4c4c;
+    border: none;
+    text-decoration: none;
+}
+
+.contain input{
+    font-family: "Kaiti TC","monospace",sans-serif;
+    font-size: 28px;
+    height: 30px;
+    width: 50vw;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 2px solid #777;
+    outline: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    position: relative;
+    z-index: 3;
+    margin-top:10px ;
+    color: #1e8ae0;
+}
+.contain input:hover,.contain input:active,.contain input:focus{
+    border-bottom: 2px solid #2195f3;
+}
+.input label{
+    z-index: 0;
+    position: absolute;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 30px;
+    top:0;
+    left:0;
+    color: rgb(76, 76, 76);
+    word-wrap:normal;
+    white-space:nowrap;
+}
+.contain img{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    border: 1px solid rgba(255, 255, 255, 0);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: none;
+    z-index:100;
+}
+.input input:hover~img,.input input:active~img,.input input:focus~img,.input input:valid~img{
+    display: block;
+}
+.input input:hover+label,.input input:active+label,.input input:focus+label,.input input:valid+label{
+    transform: translateY(-15px);
+    font-size:15px;
+    color: #7f7f7f;
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+}
+
+.input{
+    position: relative;
+    height: 40px;
+    margin-top: 30px;
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 3vh;
+    right: 5vw;
+
+}
+.footer p{
+    font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Heiti SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+    color: #4c4c4c;
+    font-weight: 700;
+    font-size: 15px;
+}
+.download{
+    text-decoration:none;
+
+
+}
+
+@media screen and (max-width : 1024px)  {
+    /*手机*/
+    .canvas{
+        background-color: white;
+        position: absolute;
+        bottom: 2vh;
+        left: 3vw;
+        display: none;
+        width: 180px;
+        height: 200px;
+        text-align: center;
+    }
+    h1{
+
+        -webkit-background-image:url(water_phone.png) ;
+        font-size:32px;
+        white-space:nowrap;
+        background-image: url(water_phone.png);
+
+
+    }
+
+    .contain {
+        text-align: center;
+        width:75vw;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+    .contain input{
+        width: 100%;
+        height: 20px;
+        font-size: 20px;
+    }
+    .contain label{
+        font-size: 20px;
+    }
+    .contain  img{
+        height: 25px;
+        width: 25px;
+        top:5px;
+    }
+    .footer{
+        text-align: center;
+        width: 100%;
+        left: 0;
+
+    }
+    .footer p{
+        font-size: 10px;
+        white-space:nowrap;
+    }
+
+    .question{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        top:53vh;
+    }
+    .question img{
+        width: 30px;
+        height: 30px;
+    }
+    .side{
+        display: none;
+        position: absolute;
+        top: 59vh;
+        width: 50vw;
+        text-align: center;
+        background: white;
+        box-shadow: 0 0 15px #d8d8d8;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .side img{
+        margin: 3px 0 3px 0;
+        width: 30vw;
+        height: 30vw;
+        border: 1px solid #909090;
+
+    }
+    .side p{
+        position: relative;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    h1{
+        font-size:60px;
+        background-image: url(water.png);
+        -webkit-background-image:url(water.png) ;
+
+
+    }
+
+    .contain {
+        position: absolute;
+        left: 10vw;
+        top: 30%;
+        transform: translateY(-50%);
+        width: 50vw;
+    }
+    .contain img{
+
+        height: 30px;
+        width: 30px;
+    }
+    .side{
+        position: absolute;
+        width: 15vw;
+        text-align: center;
+        background: white;
+        box-shadow: 0 0 15px #d8d8d8;
+        right: 2vw;
+        bottom: 25vh;
+    }
+    .side img{
+        margin: 2px 0 1px 0;
+        width: 12vw;
+        height: 12vw;
+        border: 1px solid #909090;
+    }
+    .side p{
+        position: relative;
+    }
+    .question{
+        display: none;
+    }
+    canvas{
+
+        display: block;
+        margin: 10px auto 10px auto;
+    }
+    .canvas{
+        background-color: white;
+        position: absolute;
+        bottom: 2vh;
+        left: 3vw;
+        display: none;
+        width: 180px;
+        height: 200px;
+        text-align: center;
+    }
+    .contain a{
+        position: relative;
+
+    }
+}
